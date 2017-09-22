@@ -1,0 +1,11 @@
+<p class="deck">
+    This is a demo using <a href="http://channels.readthedocs.org/en/latest/">Django Channels</a> to implement a simple WebSocket-based chat server.
+    You can see the <a href="http://github.com/jacobian/channels-example">Code on GitHub</a>, or try the app:
+</p>
+<p>
+    <a class="button button-primary" href="{% url 'new_room' %}">Create new chat room</a>
+</p>
+<p class="quiet">
+    Or, you can visit <code>{{ request.scheme }}://{{ request.get_host }}/chat/any-path-you-want</code>
+    to create a arbitrary room or join one whoise name you know.
+</p>

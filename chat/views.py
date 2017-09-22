@@ -21,7 +21,8 @@ def new_room(request):
     new_room = None
     while not new_room:
         with transaction.atomic():
-            label = Haikunator.haikunate()
+            haikunator = Haikunator()
+            label = haikunator.haikunate()
             if Room.objects.filter(label=label).exists():
                 continue
             new_room = Room.objects.create(label=label)
